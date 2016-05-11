@@ -49,21 +49,14 @@ class TravelNote extends Component {
 
   render() {
     return (
-        <View>
-          <TextInput style={{height: 40, borderColor: 'gray', borderWidth: 1}}
-                     onChangeText={(text) => this.addNote(this, text)}
-          />
-          <ScrollView>
-
+        <ScrollView>
             <ListView
                 dataSource={this.state.dataSource}
                 renderRow={this.renderNote}
                 style={styles.listView}
             >
-
             </ListView>
-          </ScrollView>
-        </View>
+        </ScrollView>
 
     );
   }
